@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="shortcut icon" href="weather-news.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+
+    <div class="wrapper">
+
+        <!-- Heading -->
+        <div class="heading">
+            <h1 class="h1-heading"><i class="fa-solid fa-cloud"></i>Weather <span>Hub</span></h1>
+            <p>Get real-time weather updates and 5-day forecasts for cities around the world. <br>Stay informed about
+                current conditions
+                and plan ahead with accurate weather predictions.</p>
+        </div>
+
+
+
+        <!-- Tabs -->
+
+        <div class="Tabs">
+            <p class="currenttab">Current Weather<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 3v1m0 16v1m8.66-12.66l-.71.71M4.05 19.95l-.71.71M21 12h-1M4 12H3m15.66 7.66l-.71-.71M4.05 4.05l-.71-.71M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                </svg></p>
+            <p class="forecast">5-Day Forecast<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10m-10 4h6m2 6h2a2 2 0 002-2V7a2 2 0 00-2-2h-2V3h-2v2H9V3H7v2H5a2 2 0 00-2 2v10a2 2 0 002 2h2v2h2v-2h4v2h2v-2z" />
+                </svg></p>
+        </div>
+        <!--Adding a loading GIF  -->
+        <div class="loading-gif">
+            <img src="Sleepy Coffee Time GIF by Pudgy Penguins.gif" alt="" width="170px" height="170px">
+        </div>
+
+
+        <!-- Search Form -->
+        <div class="search-form">
+
+            <p><i class="fa-solid fa-magnifying-glass fa-xs"></i>Current Weather</p>
+            <form class="currentweather-searchform">
+                <input type="text" required placeholder="Enter city name......" data-searchinput>
+                <button>Search</button>
+
+            </form>
+        </div>
+        <!-- Current Weather Card -->
+
+        <div class="current-weather-card">
+
+            <!-- Display-Card -->
+
+            <div class="display-Weather">
+                <div>
+                    <p>City: <span data-cityname></span></p>
+                </div>
+                <div>
+                    <p>Temperature: <span data-temp></span></p>
+                </div>
+                <div>
+                    <p>Clouds: <span data-clouds></span></p>
+                </div>
+                <div>
+                    <p>Humidity: <span data-humidity></span></p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- 5-Day Weather ForeCast -->
+        <div class="search-form1">
+            <p><i class="fa-solid fa-calendar-days"></i>5-Day Weather Forecast</p>
+            <form class="forecastweather-searchform">
+                <input type="text" required placeholder="Enter city name for 5-day forecast" data-forecastsearchform>
+                <button>Search</button>
+            </form>
+        </div>
+        <div class="forecast-Card">
+
+
+            <!-- Search Form -->
+
+
+            <!-- Weather-Info Cards -->
+            <!-- This data will be dynamically added by javascript -->
+            <div class="weather-info-card"></div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="Index.js"></script>
+</body>
+
+</html>
